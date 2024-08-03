@@ -2,7 +2,7 @@ import logging
 from enum import Enum
 from datetime import datetime
 from typing import Callable, List, Union
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, FeatureNotFound
 from myao.containers import Comment, Torrent, User, View
 from myao.parameters import Category, Subcategory, TorrentType
 from myao.errors import NoResultsFound, UnexpectedError
@@ -46,7 +46,7 @@ def _log_unexpected_errors(func: Callable) -> Callable:
     def _inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except NoResultsFound as e:
+        except (NoResultsFound, FeatureNotFound)as e:
             raise e
         except Exception as e:
             msg = f"Please provide this log error to https://github.com/g3nsy/myao/issues"
