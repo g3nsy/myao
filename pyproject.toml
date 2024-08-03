@@ -1,6 +1,6 @@
 [tool.poetry]
 name = 'myao'
-version = '0.0.1'
+version = '0.0.2'
 description = 'A flexible Nyaa API written in Python'
 authors = ['Simone Gentili <gensydev@gmail.com>']
 license = 'MIT'

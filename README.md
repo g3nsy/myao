@@ -1,6 +1,6 @@
 # Myao
 ## A flexible Nyaa API written in Python.
-![Version](https://img.shields.io/badge/version-0.0.1-blue)
+![Version](https://img.shields.io/badge/version-0.0.2-blue)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://en.wikipedia.org/wiki/MIT_License)
 ---
 This library is intended to allow users to interact with Nyaa and Sukebei 
