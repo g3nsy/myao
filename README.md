@@ -65,7 +65,8 @@ torrents = get_multiple_torrents(
 url = format_url(
     query='Steins;Gate',
     category=Category.LITERATURE,
-    subcategory=Subcategory.MANGA
+    subcategory=Subcategory.RAW,
+    rss=True
 )
 
 response = requests.get(url)
