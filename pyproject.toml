@@ -1,7 +1,7 @@
 [tool.poetry]
 name = 'myao'
 version = '0.0.1'
-description = ''
+description = 'A flexible Nyaa API written in Python'
 authors = ['Simone Gentili <gensydev@gmail.com>']
 license = 'MIT'
 readme = 'README.md'
@@ -22,7 +22,8 @@ keywords = [
   'nyaa-land-api',
   'torrent',
   'torrent download',
-  'torrent api'
+  'torrent-api',
+  'python-api'
 ]
 
 [tool.poetry.dependencies]
