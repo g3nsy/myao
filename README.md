@@ -48,7 +48,7 @@ url = format_url(
     query='Lain',
     category=Category.ANIME,
     subcategory=Subcategory.ENGLISH_TRANSLATED,
-    filter=Filter.TRUSTED_ONLY,
+    filter_=Filter.TRUSTED_ONLY,
     order=Order.ASCENDING
 )
 
