@@ -77,7 +77,6 @@ def _extractor(extractor_func_name: str) -> Callable:
 @_inputs(_SINGLE_TORRENT)
 @_extractor('get_single_torrent')
 def test_single_torrent(data: Torrent) -> None:
-    print(data.size)
     _types.check_torrent_fields(data)
 
 
