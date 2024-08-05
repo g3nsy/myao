@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-0.0.2-blue)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://en.wikipedia.org/wiki/MIT_License)
 ---
-This library is intended to allow users to interact with Nyaa and Sukebei 
+This library is intended to allow users to interact with [Nyaa](https://nyaa.si/) and [Sukebei](https://sukebei.nyaa.si/)
 without forcing the use of a specific HTTP library like requests and the 
 use of a specific HTML parser like lxml. Only static components are 
 implemented: a component for defining URLs and for extracting and organizing 
