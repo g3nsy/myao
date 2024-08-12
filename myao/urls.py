@@ -15,17 +15,29 @@ from myao.parameters import (
 
 
 class Formatter:
-    def __init__(self):
-        self._site: Site = NyaaSite.NYAA_SI
-        self._user: Optional[str] = None
-        self._query = ''
-        self._page = 0
-        self._category = Category.ALL_CATEGORIES
-        self._subcategory: Optional[Subcategory] = None
-        self._sorting = Sorting.ID
-        self._order = Order.DESCENDANT
-        self._filter = Filter.NO_FILTER
-        self._rss = False
+    def __init__(
+            self,
+            site: Site = NyaaSite.NYAA_SI,
+            user: Optional[str] = None,
+            query: str = '',
+            page: int = 0,
+            category: Category = Category.ALL_CATEGORIES,
+            subcategory: Optional[Subcategory] = None,
+            sorting: Sorting = Sorting.ID,
+            order: Order = Order.DESCENDANT,
+            filter: Filter = Filter.NO_FILTER,
+            rss: bool = False
+    ):
+        self._site = site
+        self.user = user
+        self.query = query
+        self.page = page
+        self.category = category
+        self.subcategory = subcategory
+        self.sorting = sorting
+        self.order = order
+        self.filter = filter
+        self.rss = rss
 
     @property
     def site(self) -> Site:
@@ -33,17 +45,16 @@ class Formatter:
 
     @site.setter
     def site(self, site: Site) -> None:
-        if self._site != site:
-            self._site = site
-            self._category = Category.ALL_CATEGORIES
-            self._subcategory = None
+        self._site = site
+        self._category = Category.ALL_CATEGORIES
+        self._subcategory = None
 
     @property
     def user(self) -> Optional[str]:
         return self._user
 
     @user.setter
-    def user(self, user: str) -> None:
+    def user(self, user: Optional[str]) -> None:
         self._user = user
 
     @property
@@ -52,7 +63,7 @@ class Formatter:
 
     @query.setter
     def query(self, query: str = '') -> None:
-        self._query = '+'.join(query.split())
+        self._query = query
 
     @property
     def page(self) -> int:

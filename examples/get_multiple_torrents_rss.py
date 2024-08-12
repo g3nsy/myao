@@ -1,4 +1,9 @@
-import requests
+import os, sys, requests
+
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
 from myao.urls import format_url
 from myao.extractors import get_multiple_torrents_rss
 from myao.sites import NyaaSite
