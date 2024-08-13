@@ -1,6 +1,6 @@
 import requests
 import os
-from tests import _types
+import _types
 from typing import Callable, Union, List
 from myao.extractors import Extractor, Parser
 from myao.containers import Torrent, Comment, View
