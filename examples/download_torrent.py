@@ -1,9 +1,4 @@
-import os, sys, requests
-
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
+import requests
 from myao.urls import get_download_torrent_url
 
 

@@ -1,9 +1,4 @@
-import os, sys, requests
-
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
+import requests
 from myao.sites import SukebeiSite
 from myao.extractors import get_view
 from myao.urls import get_single_torrent_url
